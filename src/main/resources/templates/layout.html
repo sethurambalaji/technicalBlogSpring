@@ -11,6 +11,14 @@
     </header>
 </header>
 
+<header th:fragment="logged-in" th:remove="tag">
+    <header>
+        <form method="post">
+            <input type="submit" value="Logout"/>
+        </form>
+    </header>
+</header>
+
 </body>
 
 </html>

@@ -1,7 +1,9 @@
 package com.demo.technicalblogapp.controller;
 
+import com.demo.technicalblogapp.model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class UserController {
@@ -14,5 +16,10 @@ public class UserController {
     @RequestMapping("users/registration")
     public String regstration(){
         return "users/registration";
+    }
+
+    @RequestMapping(value = "users/login", method= RequestMethod.POST)
+    public String loginUser(User user) {
+        return "redirect:/posts";
     }
 }
